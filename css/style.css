@@ -36,20 +36,20 @@ body {
     
 }
 /*============= header logo ======================== */
-.logo-box{
+.header__logo-box{
     position: absolute;
     top: 40px;
     left: 40px;
 }
 
-.logo {
+.header__logo {
 height: 35px;
 }
 /*======== end of header logo ==================== */
 
 /*============================= main/sub header ======================= */
 
-.text-box{
+.header__text-box{
     position: absolute;
     top: 40%;
     left: 50%;
@@ -63,23 +63,23 @@ height: 35px;
     backface-visibility: hidden;
     margin-bottom: 60px;
 }
-.heading-primary-main{
+.heading-primary--main{
     display: block;
     font-size: 60px;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 36px;
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
 }
-.heading-primary-sub {
+.heading-primary--sub {
     display: block;
     font-size: 20px;
     font-weight: 700px;
     letter-spacing: 17.4px;
     animation: moveInRight 1s ease-out
 }
-/*===========main/sub heading animations ========== */
+/*=================== animations ================= */
 @keyframes moveInLeft {
     0% {
         opacity: 0;
@@ -117,7 +117,7 @@ height: 35px;
         transform: translate(0);
     }
 }
-/*========== end of main/sub heading animations =========== */
+/*========== end of animations ================= */
 
 /*=============================== end of main/sub header ======================= */
 
@@ -144,7 +144,7 @@ height: 35px;
 
 }
 
-.btn-white {
+.btn--white {
     background-color: #fff;
     color: #777;
     
@@ -171,7 +171,7 @@ height: 35px;
 
 }
 /* animation fill mode automatically applies the styles up to zero percent before the animations starts */
-.btn-animated {
+.btn--animated {
     animation:moveInBottom .5s ease-out .75s;
     animation-fill-mode: backwards;
 }
