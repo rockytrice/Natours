@@ -1,31 +1,31 @@
-/*
-COLORS:
 
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
 
 $color-primary:#55c57a;
 $color-primary-light:#7ed56f;
 $color-primary-dark:#28b485;
-
-
+$color-grey-dark: #777;
+$color-white:#fff;
 
 /*======universal reset so each browser can render the page the exact same way============= */
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
+}
+
+
+html {
+    font-size: 62.5%;
 }
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.7;
-    color: #777;
+    color:$color-grey-dark;
     padding: 30px;
 }
 /*==============================end of basic reset ======================================= */
@@ -33,7 +33,7 @@ body {
 /* ===================================Header ============================================= */
 .header{
     height: 95vh;
-    background-image: linear-gradient(to right bottom, rgb(126, 213, 111, 0.8),rgba(40, 180, 131, 0.8)) ,url(../images/hero.jpg);
+    background-image: linear-gradient(to right bottom,rgba($color-primary-light, 0.8),rgba($color-primary-dark, 0.8)) ,url(../images/hero.jpg);
     background-size: cover;
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 75vh,0 100% );
@@ -63,7 +63,7 @@ height: 35px;
 }
 
 .heading-primary{
-    color: #fff;
+    color:$color-white;
     text-transform: uppercase;
     backface-visibility: hidden;
     margin-bottom: 60px;
@@ -150,8 +150,8 @@ height: 35px;
 }
 
 .btn--white {
-    background-color: #fff;
-    color: #777;
+    background-color:$color-white;
+    color:$color-grey-dark;
     
 }
 .btn::after {
@@ -168,7 +168,7 @@ height: 35px;
 }
 
 .btn-white::after {
-    background-color: #fff;
+    background-color:$color-white;
 }
 .btn:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
