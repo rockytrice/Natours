@@ -49,4 +49,54 @@
         transform: translateY(-4rem);
 
     }
+
+    &__radio-group {
+        width: 49%;
+        display: inline-block;
+    }
+
+    &__radio-input {
+        display: none;
+    }
+
+    &__radio-label {
+        font-size: $default-font-size;
+        cursor: pointer;
+        position: relative;
+        padding-left: 5rem;
+    }
+
+    &__radio-button {
+        height: 3rem;
+        width: 3rem;
+        border: 5px solid $color-primary;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        left: -2.4rem;
+        top: -3px;
+    
+
+        &::after {
+            content: "";
+            display: block;
+            height: 1.3rem;
+            width: 1.3rem;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $color-primary;
+            opacity: 0;
+            transition: opacity .2s;
+        }
+    }
+    // as soon as we hit the label element, the radio-input becomes checked. So we have this checked pseudo-class available to us.Then we simply select the sibling of that one, and then the child because that's the one that we want to change each time that the radio input is selected.
+    &__radio-input:checked + &__radio-label &__radio-button::after {
+        opacity: 1;
+
+    }
+
+
 }

@@ -1,4 +1,6 @@
 .btn {
+    // note..the & by itself simply translate into button
+    &,
     &:link,
     &:visited {
         text-transform: uppercase;
@@ -8,6 +10,10 @@
         border-radius: 100px;
         transition: all .2s;
         position: relative;
+
+        // change for the <button> element
+        border:none;
+        cursor: pointer;
     } 
     &:hover{
         transform: translateY(-3px);
@@ -19,7 +25,9 @@
         }
     }
     
-    &:active {
+    &:active,
+     :focus{
+         outline: none;
         transform: translateY(-1px);
         box-shadow: 0 5px 15px rgba($color-black, .3);
     
